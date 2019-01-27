@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @turno.fecha %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @turno.horario %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @turno.responsable.nombre %>
+</p>
+
+<p>
+  <strong>Solicitado:</strong>
+  <%= @turno.solicitado %>
+</p>
+
+<%= link_to 'Edit', edit_turno_path(@turno) %> |
+<%= link_to 'Back', turnos_path %>
