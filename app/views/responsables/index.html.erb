@@ -16,7 +16,7 @@
     <% @responsables.each do |responsable| %>
       <tr>
         <td><%= responsable.nombre %></td>
-        <td><%= responsable.docente %></td>
+        <td><%= bool_to_siono(responsable.docente) %></td>
         <td><%= responsable.materia %></td>
         <td><%= link_to 'Show', responsable %></td>
         <td><%= link_to 'Edit', edit_responsable_path(responsable) %></td>
@@ -28,4 +28,5 @@
 
 <br>
 
-<%= link_to 'New Responsable', new_responsable_path %>
+<%= link_to 'New Responsable  ', new_responsable_path %>
+<%= link_to '  Turnos', turnos_path %>

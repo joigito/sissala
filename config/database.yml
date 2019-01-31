@@ -19,8 +19,8 @@ test:
   encoding: unicode
   database: sample_postgres_test
   pool: 5
-  username: sample_postgres
-  password:
+  username: joigito
+  password: joijoi
 
 production:
   adapter: postgresql

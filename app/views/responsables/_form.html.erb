@@ -1,32 +1,9 @@
-<%= form_with(model: responsable, local: true) do |form| %>
-  <% if responsable.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(responsable.errors.count, "error") %> prohibited this responsable from being saved:</h2>
-
-      <ul>
-      <% responsable.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nombre %>
-    <%= form.text_field :nombre, id: :responsable_nombre %>
-  </div>
-
-  <div class="field">
-    <%= form.label :docente %>
-    <%= form.check_box :docente, id: :responsable_docente %>
-  </div>
-
-  <div class="field">
-    <%= form.label :materia %>
-    <%= form.text_field :materia, id: :responsable_materia %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= simple_form_for @responsable do |f| %>
+  <%= f.input :nombre %>
+  <%= f.input :docente, as: :radio_buttons %>
+  <%= f.input :materia %>  
+  <%= f.button :submit %>
 <% end %>
+
+
+
