@@ -1,7 +1,8 @@
 <%= simple_form_for @turno do |f| %>
-  <%= f.input :nombre %>
-  <%= f.input :docente %>
-  <%= f.input :materia %>  
+  <%= f.input :fecha %>
+  <%= f.input :horario, collection: ['1°M', '2°M', '5°y6°H'], as: :radio_buttons %>
+  <%= f.association :responsable, :label_method => :nombre %>
+  <%= f.input :solicitado %>  
   <%= f.button :submit %>
 <% end %>
 

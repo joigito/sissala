@@ -1,5 +1,5 @@
 <%= simple_form_for @responsable do |f| %>
-  <%= f.input :nombre %>
+  <%= f.input :nombre, input_html: {maxlength: 25, size: 35} %>
   <%= f.input :docente, as: :radio_buttons %>
   <%= f.input :materia %>  
   <%= f.button :submit %>
