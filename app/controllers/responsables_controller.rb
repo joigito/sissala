@@ -4,6 +4,7 @@ class ResponsablesController < ApplicationController
   # GET /responsables
   # GET /responsables.json
   def index
+    @responsable = Responsable.new
     @responsables = Responsable.all.order(:nombre)
   end
 
