@@ -4,7 +4,7 @@ class TurnosController < ApplicationController
   # GET /turnos
   # GET /turnos.json
   def index
-    @turnos = Turno.all
+    @turnos = Turno.all.order('fecha DESC')
   end
 
   # GET /turnos/1
