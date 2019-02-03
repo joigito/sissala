@@ -21,7 +21,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
-
+gem 'simple_form_custom_inputs'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-switchery'
+  gem 'rails-assets-jquery.maskedinput'
+  gem 'rails-assets-bootstrap-datepicker'
+end
 #gem 'bootstrap'
 
 # Use CoffeeScript for .coffee assets and views

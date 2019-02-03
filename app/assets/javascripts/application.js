@@ -14,3 +14,7 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require switchery
+//= require jquery.maskedinput
+//= require bootstrap-datepicker
+//= require simple_form_custom_inputs

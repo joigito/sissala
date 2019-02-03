@@ -25,7 +25,8 @@ class ResponsablesController < ApplicationController
   # POST /responsables.json
   def create
     @responsable = Responsable.new(responsable_params)
-
+    @responsable.nombre = params[:responsable][:nombre].upcase
+    @responsable.materia = params[:responsable][:materia].upcase
     respond_to do |format|
       if @responsable.save
         format.html { redirect_to @responsable, notice: 'Responsable was successfully created.' }
